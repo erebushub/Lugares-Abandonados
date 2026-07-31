@@ -24,207 +24,99 @@
 
   <style>
 
-    .argentina-hero {
-      min-height: 520px;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,.85),
-          rgba(0,0,0,.15)
-        ),
-        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
-    }
+.argentina-hero {
+  min-height: 520px;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  overflow: hidden;
 
-    .argentina-hero-content {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 30px;
-      color: white;
-    }
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.85),
+      rgba(0,0,0,.15)
+    ),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
+    center / cover no-repeat;
+}
 
-    .argentina-hero h1 {
-      font-size: clamp(48px, 8vw, 92px);
-      margin: 10px 0 20px;
-      line-height: .95;
-    }
 
-    .argentina-hero p {
-      max-width: 700px;
-      font-size: 20px;
-      line-height: 1.7;
-      color: rgba(255,255,255,.85);
-    }
+/* =========================================
+   IMÁGENES DE ARGENTINA
+========================================= */
 
-    .argentina-intro {
-      max-width: 850px;
-      margin-bottom: 50px;
-    }
+.argentina-fotos {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 260px 260px;
+  gap: 18px;
+  margin-top: 40px;
+}
 
-    .provincias-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
+.argentina-foto {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  min-height: 0;
+}
 
-    .provincia-card {
-      display: block;
-      min-height: 230px;
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-      text-decoration: none;
-      color: white;
-      border-radius: 4px;
-      background-size: cover;
-      background-position: center;
-      transition: transform .25s ease;
-    }
+.argentina-foto:first-child {
+  grid-row: span 2;
+}
 
-    .provincia-card:hover {
-      transform: translateY(-5px);
-    }
+.argentina-foto img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
 
-    .provincia-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,.9),
-          rgba(0,0,0,.15)
-        );
-    }
+.argentina-foto:hover img {
+  transform: scale(1.04);
+}
 
-    .provincia-card-content {
-      position: relative;
-      z-index: 2;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-    }
+.argentina-foto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,.65),
+    transparent 55%
+  );
+}
 
-    .provincia-numero {
-      font-size: 13px;
-      opacity: .7;
-      margin-bottom: 8px;
-    }
+.argentina-foto-caption {
+  position: absolute;
+  z-index: 2;
+  left: 22px;
+  bottom: 20px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
 
-    .provincia-card h3 {
-      font-size: 28px;
-      margin: 0 0 6px;
-    }
 
-    .provincia-card span:last-child {
-      font-size: 14px;
-      opacity: .75;
-    }
+/* =========================================
+   RESPONSIVE
+========================================= */
 
-    .provincia-buenos-aires {
-      background-image: url("https://images.unsplash.com/photo-1589909202802-8f4aadce1849?auto=format&fit=crop&w=1000&q=80");
-    }
+@media (max-width: 700px) {
 
-    .provincia-catamarca {
-      background-image: url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1000&q=80");
-    }
+  .argentina-fotos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 240px);
+  }
 
-    .provincia-chaco {
-      background-image: url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=80");
-    }
+  .argentina-foto:first-child {
+    grid-row: auto;
+  }
 
-    .provincia-chubut {
-      background-image: url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1000&q=80");
-    }
+}
 
-    .provincia-cordoba {
-      background-image: url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .provincia-mendoza {
-      background-image: url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .provincia-patagonia {
-      background-image: url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=80");
-    }
-
-    .argentina-destacados {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 24px;
-      margin-bottom: 70px;
-    }
-
-    .argentina-destacado {
-      min-height: 380px;
-      position: relative;
-      overflow: hidden;
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,0,0,.9),
-          rgba(0,0,0,.1)
-        ),
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20Piria%20en%20la%20actualidad..jpg")
-        center / cover no-repeat;
-      display: flex;
-      align-items: flex-end;
-      padding: 35px;
-      color: white;
-      text-decoration: none;
-    }
-
-    .argentina-destacado h3 {
-      font-size: 36px;
-      margin: 8px 0;
-    }
-
-    .argentina-destacado p {
-      margin: 0;
-      max-width: 650px;
-      opacity: .8;
-    }
-
-    @media (max-width: 900px) {
-
-      .provincias-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .argentina-destacados {
-        grid-template-columns: 1fr;
-      }
-
-    }
-
-    @media (max-width: 600px) {
-
-      .provincias-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .argentina-hero {
-        min-height: 460px;
-      }
-
-      .argentina-hero-content {
-        padding: 50px 22px;
-      }
-
-      .argentina-hero p {
-        font-size: 17px;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -328,7 +220,70 @@
 
     </div>
 
+<section class="lugar-section">
 
+  <div class="lugares-container">
+
+    <span class="section-kicker">
+      ARGENTINA
+    </span>
+
+    <h2>
+      Un país de paisajes y lugares olvidados
+    </h2>
+
+    <div class="argentina-fotos">
+
+      <div class="argentina-foto">
+
+        <img
+          src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=85"
+          alt="Paisaje de la Patagonia argentina"
+          loading="lazy"
+        >
+
+        <span class="argentina-foto-caption">
+          Patagonia
+        </span>
+
+      </div>
+
+
+      <div class="argentina-foto">
+
+        <img
+          src="https://images.unsplash.com/photo-1612294037637-2c0f2c1a5f8c?auto=format&fit=crop&w=900&q=85"
+          alt="Buenos Aires, Argentina"
+          loading="lazy"
+        >
+
+        <span class="argentina-foto-caption">
+          Buenos Aires
+        </span>
+
+      </div>
+
+
+      <div class="argentina-foto">
+
+        <img
+          src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85"
+          alt="Paisaje del norte de Argentina"
+          loading="lazy"
+        >
+
+        <span class="argentina-foto-caption">
+          Norte argentino
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+    
     <!-- DESTACADOS -->
 
     <div
