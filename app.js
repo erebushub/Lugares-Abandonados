@@ -317,11 +317,12 @@ function buscar() {
 }
 
 
-search.addEventListener(
-  "input",
-  buscar
-);
-
+if (search) {
+  search.addEventListener(
+    "input",
+    buscar
+  );
+}
 
 document
   .querySelectorAll(".category-card")
@@ -339,19 +340,27 @@ document
 
       renderPlaces(resultado);
 
-      document
-        .getElementById("lugares")
-        .scrollIntoView({
+      const lugaresSection =
+        document.getElementById("lugares");
+
+      if (lugaresSection) {
+        lugaresSection.scrollIntoView({
           behavior: "smooth"
         });
+      }
 
     });
 
   });
 
 
-renderFeatured();
-renderPlaces(lugares);
+if (featuredGrid) {
+  renderFeatured();
+}
+
+if (placesGrid) {
+  renderPlaces(lugares);
+}
 
 const params = new URLSearchParams(window.location.search);
 const lugarId = params.get("id");
