@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,16 +6,13 @@
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lugares abandonados de Argentina | Lugares Abandonados</title>
 
   <meta
     name="description"
-    content="Explora los lugares abandonados de Argentina. Descubre edificios históricos, hoteles, estaciones, fábricas, pueblos y otros lugares olvidados de todas las provincias."
+    content="Explora los lugares abandonados de Argentina. Descubre edificios históricos, hoteles, estaciones, fábricas, pueblos y construcciones olvidadas de todas las provincias."
   >
 
   <link
@@ -24,99 +22,349 @@
 
   <style>
 
-.argentina-hero {
-  min-height: 520px;
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  overflow: hidden;
+    /* =====================================================
+       HERO ARGENTINA
+    ===================================================== */
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,.85),
-      rgba(0,0,0,.15)
-    ),
-    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
-    center / cover no-repeat;
-}
+    .argentina-hero {
+      min-height: 560px;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
 
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.88),
+          rgba(0,0,0,.15)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/0/0d/Perito_Moreno_Glacier_Patagonia_Argentina_Luca_Galuzzi_2005.JPG")
+        center / cover no-repeat;
+    }
 
-/* =========================================
-   IMÁGENES DE ARGENTINA
-========================================= */
+    .argentina-hero-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 90px 30px;
+      color: white;
+    }
 
-.argentina-fotos {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 260px 260px;
-  gap: 18px;
-  margin-top: 40px;
-}
+    .argentina-hero h1 {
+      font-size: clamp(52px, 8vw, 96px);
+      margin: 10px 0 20px;
+      line-height: .95;
+    }
 
-.argentina-foto {
-  position: relative;
-  overflow: hidden;
-  border-radius: 6px;
-  min-height: 0;
-}
-
-.argentina-foto:first-child {
-  grid-row: span 2;
-}
-
-.argentina-foto img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
-  transition: transform .4s ease;
-}
-
-.argentina-foto:hover img {
-  transform: scale(1.04);
-}
-
-.argentina-foto::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    rgba(0,0,0,.65),
-    transparent 55%
-  );
-}
-
-.argentina-foto-caption {
-  position: absolute;
-  z-index: 2;
-  left: 22px;
-  bottom: 20px;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-}
+    .argentina-hero p {
+      max-width: 720px;
+      font-size: 20px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.88);
+    }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+    /* =====================================================
+       INTRO
+    ===================================================== */
 
-@media (max-width: 700px) {
+    .argentina-intro {
+      max-width: 850px;
+      margin-bottom: 55px;
+    }
 
-  .argentina-fotos {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 240px);
-  }
 
-  .argentina-foto:first-child {
-    grid-row: auto;
-  }
+    /* =====================================================
+       DESTACADOS
+    ===================================================== */
 
-}
+    .argentina-destacados {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+      margin-bottom: 20px;
+    }
 
-</style>
+    .argentina-destacado {
+      min-height: 390px;
+      position: relative;
+      overflow: hidden;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.9),
+          rgba(0,0,0,.1)
+        ),
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20Piria%20en%20la%20actualidad..jpg")
+        center / cover no-repeat;
+
+      display: flex;
+      align-items: flex-end;
+
+      padding: 35px;
+
+      color: white;
+      text-decoration: none;
+
+      border-radius: 4px;
+
+      transition: transform .25s ease;
+    }
+
+    .argentina-destacado:hover {
+      transform: translateY(-5px);
+    }
+
+    .argentina-destacado h3 {
+      font-size: 38px;
+      margin: 8px 0;
+    }
+
+    .argentina-destacado p {
+      margin: 0;
+      opacity: .85;
+    }
+
+
+    /* =====================================================
+       PROVINCIAS
+    ===================================================== */
+
+    .provincias-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .provincia-card {
+      display: block;
+
+      min-height: 230px;
+
+      padding: 28px;
+
+      position: relative;
+      overflow: hidden;
+
+      text-decoration: none;
+      color: white;
+
+      border-radius: 4px;
+
+      background-size: cover;
+      background-position: center;
+
+      transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .provincia-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .provincia-card::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(0,0,0,.9),
+          rgba(0,0,0,.15)
+        );
+    }
+
+    .provincia-card-content {
+      position: relative;
+      z-index: 2;
+
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .provincia-numero {
+      font-size: 13px;
+      opacity: .7;
+      margin-bottom: 8px;
+    }
+
+    .provincia-card h3 {
+      font-size: 28px;
+      margin: 0 0 6px;
+    }
+
+    .provincia-card span:last-child {
+      font-size: 14px;
+      opacity: .75;
+    }
+
+
+    /* =====================================================
+       IMÁGENES PROVINCIAS
+    ===================================================== */
+
+    .provincia-buenos-aires {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/3/3b/Buenos_Aires_-_Puerto_Madero.jpg");
+    }
+
+    .provincia-catamarca {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/5/5e/Cuidad_de_Bel%C3%A9n_-_Catamarca.jpg");
+    }
+
+    .provincia-chaco {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/7/73/Parque_Nacional_Chaco.jpg");
+    }
+
+    .provincia-chubut {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/7/7a/Los_Altares_Chubut_Argentina.jpg");
+    }
+
+    .provincia-cordoba {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/1/1e/Sierras_de_Cordoba.jpg");
+    }
+
+    .provincia-corrientes {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/8/8c/Ibera_Corrientes_Argentina.jpg");
+    }
+
+    .provincia-entre-rios {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/2/25/Palacio_San_Jose_Entre_Rios.jpg");
+    }
+
+    .provincia-formosa {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/5/5b/Formosa_Argentina_landscape.jpg");
+    }
+
+    .provincia-jujuy {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/8/8e/Quebrada_de_Humahuaca_Jujuy.jpg");
+    }
+
+    .provincia-la-pampa {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/4/4d/La_Pampa_Argentina_landscape.jpg");
+    }
+
+    .provincia-la-rioja {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/0/0b/Parque_Nacional_Talampaya.jpg");
+    }
+
+    .provincia-mendoza {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Aconcagua_Mendoza_Argentina.jpg");
+    }
+
+    .provincia-misiones {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/3/36/Cataratas_del_Iguazu.jpg");
+    }
+
+    .provincia-neuquen {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/6/6e/Volcan_Lanin_Neuquen.jpg");
+    }
+
+    .provincia-rio-negro {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/1/1d/Bariloche_Rio_Negro_Argentina.jpg");
+    }
+
+    .provincia-salta {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/4/4d/Salta_Argentina_landscape.jpg");
+    }
+
+    .provincia-san-juan {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Valle_de_la_Luna_San_Juan.jpg");
+    }
+
+    .provincia-san-luis {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/6/65/Sierra_de_los_Comechingones.jpg");
+    }
+
+    .provincia-santa-cruz {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/2/25/Perito_Moreno_Glacier_Patagonia.jpg");
+    }
+
+    .provincia-santa-fe {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/1/1c/Rosario_Santa_Fe_Argentina.jpg");
+    }
+
+    .provincia-santiago {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/6/6c/Santiago_del_Estero_Argentina.jpg");
+    }
+
+    .provincia-tierra {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/4/4f/Ushuaia_Tierra_del_Fuego_Argentina.jpg");
+    }
+
+    .provincia-tucuman {
+      background-image:
+        url("https://upload.wikimedia.org/wikipedia/commons/3/3f/Tucuman_Argentina_landscape.jpg");
+    }
+
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .provincias-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .argentina-destacados {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .provincias-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .argentina-hero {
+        min-height: 460px;
+      }
+
+      .argentina-hero-content {
+        padding: 55px 22px;
+      }
+
+      .argentina-hero p {
+        font-size: 17px;
+      }
+
+    }
+
+  </style>
 
 </head>
 
@@ -161,7 +409,9 @@
 <main>
 
 
-<!-- HERO -->
+<!-- =====================================================
+     HERO
+===================================================== -->
 
 <section class="argentina-hero">
 
@@ -188,11 +438,14 @@
 
 
 
-<!-- INTRO -->
+<!-- =====================================================
+     INTRO + DESTACADO
+===================================================== -->
 
 <section class="lugar-section">
 
   <div class="lugares-container">
+
 
     <div class="argentina-intro">
 
@@ -220,76 +473,13 @@
 
     </div>
 
-<section class="lugar-section">
 
-  <div class="lugares-container">
-
-    <span class="section-kicker">
-      ARGENTINA
-    </span>
-
-    <h2>
-      Un país de paisajes y lugares olvidados
-    </h2>
-
-    <div class="argentina-fotos">
-
-      <div class="argentina-foto">
-
-        <img
-          src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=1200&q=85"
-          alt="Paisaje de la Patagonia argentina"
-          loading="lazy"
-        >
-
-        <span class="argentina-foto-caption">
-          Patagonia
-        </span>
-
-      </div>
-
-
-      <div class="argentina-foto">
-
-        <img
-          src="https://images.unsplash.com/photo-1612294037637-2c0f2c1a5f8c?auto=format&fit=crop&w=900&q=85"
-          alt="Buenos Aires, Argentina"
-          loading="lazy"
-        >
-
-        <span class="argentina-foto-caption">
-          Buenos Aires
-        </span>
-
-      </div>
-
-
-      <div class="argentina-foto">
-
-        <img
-          src="https://images.unsplash.com/photo-1526392060635-9d6019884377?auto=format&fit=crop&w=900&q=85"
-          alt="Paisaje del norte de Argentina"
-          loading="lazy"
-        >
-
-        <span class="argentina-foto-caption">
-          Norte argentino
-        </span>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-    
-    <!-- DESTACADOS -->
 
     <div
       id="destacados"
       class="argentina-destacados"
     >
+
 
       <a
         href="buenos-aires/"
@@ -315,6 +505,7 @@
       </a>
 
 
+
       <div class="dato">
 
         <strong>
@@ -332,6 +523,7 @@
 
       </div>
 
+
     </div>
 
   </div>
@@ -340,7 +532,9 @@
 
 
 
-<!-- PROVINCIAS -->
+<!-- =====================================================
+     PROVINCIAS
+===================================================== -->
 
 <section
   id="provincias"
@@ -361,371 +555,210 @@
     <div class="provincias-grid">
 
 
-      <a href="buenos-aires/"
-         class="provincia-card provincia-buenos-aires">
-
+      <a href="buenos-aires/" class="provincia-card provincia-buenos-aires">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">01</span>
-
           <h3>Buenos Aires</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="catamarca/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="catamarca/" class="provincia-card provincia-catamarca">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">02</span>
-
           <h3>Catamarca</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="chaco/"
-         class="provincia-card provincia-chaco">
-
+      <a href="chaco/" class="provincia-card provincia-chaco">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">03</span>
-
           <h3>Chaco</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="chubut/"
-         class="provincia-card provincia-chubut">
-
+      <a href="chubut/" class="provincia-card provincia-chubut">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">04</span>
-
           <h3>Chubut</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="cordoba/"
-         class="provincia-card provincia-cordoba">
-
+      <a href="cordoba/" class="provincia-card provincia-cordoba">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">05</span>
-
           <h3>Córdoba</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="corrientes/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="corrientes/" class="provincia-card provincia-corrientes">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">06</span>
-
           <h3>Corrientes</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="entre-rios/"
-         class="provincia-card provincia-chaco">
-
+      <a href="entre-rios/" class="provincia-card provincia-entre-rios">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">07</span>
-
           <h3>Entre Ríos</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="formosa/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="formosa/" class="provincia-card provincia-formosa">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">08</span>
-
           <h3>Formosa</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="jujuy/"
-         class="provincia-card provincia-mendoza">
-
+      <a href="jujuy/" class="provincia-card provincia-jujuy">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">09</span>
-
           <h3>Jujuy</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="la-pampa/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="la-pampa/" class="provincia-card provincia-la-pampa">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">10</span>
-
           <h3>La Pampa</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="la-rioja/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="la-rioja/" class="provincia-card provincia-la-rioja">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">11</span>
-
           <h3>La Rioja</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="mendoza/"
-         class="provincia-card provincia-mendoza">
-
+      <a href="mendoza/" class="provincia-card provincia-mendoza">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">12</span>
-
           <h3>Mendoza</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="misiones/"
-         class="provincia-card provincia-chaco">
-
+      <a href="misiones/" class="provincia-card provincia-misiones">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">13</span>
-
           <h3>Misiones</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="neuquen/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="neuquen/" class="provincia-card provincia-neuquen">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">14</span>
-
           <h3>Neuquén</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="rio-negro/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="rio-negro/" class="provincia-card provincia-rio-negro">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">15</span>
-
           <h3>Río Negro</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="salta/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="salta/" class="provincia-card provincia-salta">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">16</span>
-
           <h3>Salta</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="san-juan/"
-         class="provincia-card provincia-mendoza">
-
+      <a href="san-juan/" class="provincia-card provincia-san-juan">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">17</span>
-
           <h3>San Juan</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="san-luis/"
-         class="provincia-card provincia-mendoza">
-
+      <a href="san-luis/" class="provincia-card provincia-san-luis">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">18</span>
-
           <h3>San Luis</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="santa-cruz/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="santa-cruz/" class="provincia-card provincia-santa-cruz">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">19</span>
-
           <h3>Santa Cruz</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="santa-fe/"
-         class="provincia-card provincia-chaco">
-
+      <a href="santa-fe/" class="provincia-card provincia-santa-fe">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">20</span>
-
           <h3>Santa Fe</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="santiago-del-estero/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="santiago-del-estero/" class="provincia-card provincia-santiago">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">21</span>
-
           <h3>Santiago del Estero</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="tierra-del-fuego/"
-         class="provincia-card provincia-patagonia">
-
+      <a href="tierra-del-fuego/" class="provincia-card provincia-tierra">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">22</span>
-
           <h3>Tierra del Fuego</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
-      <a href="tucuman/"
-         class="provincia-card provincia-catamarca">
-
+      <a href="tucuman/" class="provincia-card provincia-tucuman">
         <div class="provincia-card-content">
-
           <span class="provincia-numero">23</span>
-
           <h3>Tucumán</h3>
-
           <span>Lugares abandonados</span>
-
         </div>
-
       </a>
 
 
@@ -737,7 +770,9 @@
 
 
 
-<!-- FINAL -->
+<!-- =====================================================
+     FINAL
+===================================================== -->
 
 <section class="lugar-final">
 
@@ -795,3 +830,4 @@
 </body>
 
 </html>
+```
