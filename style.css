@@ -648,4 +648,93 @@ a {
     flex-direction: column;
   }
 
+  /* =========================
+   FICHA DEL LUGAR
+========================= */
+
+.lugar-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.volver {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lugar-hero {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.lugar-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #eee;
+}
+
+.lugar-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lugar-info h1 {
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.05;
+  margin: 12px 0 20px;
+}
+
+.lugar-info p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.lugar-texto {
+  max-width: 800px;
+}
+
+.lugar-texto h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.lugar-texto p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+
+  .lugar-page {
+    padding: 25px 16px 60px;
+  }
+
+  .lugar-hero {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+  }
+
+  .lugar-imagen {
+    aspect-ratio: 4 / 3;
+  }
+
+  .lugar-info h1 {
+    font-size: 36px;
+  }
+
+}
+
 }
