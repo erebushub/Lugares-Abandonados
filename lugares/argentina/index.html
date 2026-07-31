@@ -16,7 +16,7 @@ content="width=device-width, initial-scale=1.0"
 
 <meta
 name="description"
-content="Explora los lugares abandonados de Argentina. Descubre edificios históricos, estaciones, fábricas, pueblos y construcciones olvidadas de todas las provincias."
+content="Explora lugares abandonados de Argentina. Descubre edificios históricos, estaciones, fábricas, pueblos y construcciones olvidadas de las provincias argentinas."
 
 >
 
@@ -26,6 +26,10 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
   >
 
   <style>
+
+    /* ================================
+       HERO
+    ================================= */
 
     .argentina-hero {
       min-height: 500px;
@@ -38,9 +42,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
         linear-gradient(
           to top,
           rgba(0,0,0,.88),
-          rgba(0,0,0,.20)
+          rgba(0,0,0,.15)
         ),
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/F%C3%A1brica%20abandonada%20en%20Florencio%20Varela%2C%20provincia%20de%20Buenos%20Aires%2C%20Argentina.jpg")
+        url("https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20Ed%C3%A9n%20-%20Fachada.jpg")
         center / cover no-repeat;
     }
 
@@ -65,42 +69,36 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
       color: rgba(255,255,255,.85);
     }
 
+
+    /* ================================
+       INTRO
+    ================================= */
+
     .argentina-intro {
       max-width: 850px;
       margin-bottom: 55px;
     }
 
-    /* =========================
-       IMÁGENES ARGENTINA
-    ========================= */
 
-    .argentina-imagenes {
+    /* ================================
+       GALERÍA ARGENTINA
+    ================================= */
+
+    .argentina-galeria {
       display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 22px;
-      margin-bottom: 70px;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
     }
 
-    .argentina-imagen-principal,
-    .argentina-imagen-secundaria {
+    .argentina-foto {
       position: relative;
+      height: 330px;
       overflow: hidden;
-      min-height: 360px;
-      color: white;
-      text-decoration: none;
-      background: #111;
+      background: #171717;
     }
 
-    .argentina-imagen-secundarias {
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-      gap: 22px;
-    }
-
-    .argentina-imagen-principal img,
-    .argentina-imagen-secundaria img {
-      position: absolute;
-      inset: 0;
+    .argentina-foto img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -108,13 +106,11 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
       transition: transform .35s ease;
     }
 
-    .argentina-imagen-principal:hover img,
-    .argentina-imagen-secundaria:hover img {
+    .argentina-foto:hover img {
       transform: scale(1.04);
     }
 
-    .argentina-imagen-principal::after,
-    .argentina-imagen-secundaria::after {
+    .argentina-foto::after {
       content: "";
       position: absolute;
       inset: 0;
@@ -122,63 +118,63 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
       background:
         linear-gradient(
           to top,
-          rgba(0,0,0,.85),
-          rgba(0,0,0,.05)
+          rgba(0,0,0,.75),
+          rgba(0,0,0,0)
         );
     }
 
-    .argentina-imagen-texto {
+    .argentina-foto-texto {
       position: absolute;
       z-index: 2;
-      left: 25px;
-      right: 25px;
-      bottom: 22px;
+      left: 22px;
+      right: 22px;
+      bottom: 20px;
+      color: white;
     }
 
-    .argentina-imagen-texto span {
-      font-size: 12px;
-      letter-spacing: .08em;
-      opacity: .75;
+    .argentina-foto-texto span {
+      display: block;
+      font-size: 11px;
+      letter-spacing: .1em;
+      opacity: .7;
+      margin-bottom: 6px;
     }
 
-    .argentina-imagen-texto h3 {
-      margin: 6px 0 0;
-      font-size: 25px;
+    .argentina-foto-texto strong {
+      font-size: 21px;
+      line-height: 1.2;
     }
 
-    .argentina-imagen-secundaria {
-      min-height: 170px;
-    }
 
-    .argentina-imagen-secundaria .argentina-imagen-texto h3 {
-      font-size: 20px;
-    }
-
-    /* =========================
+    /* ================================
        PROVINCIAS
-    ========================= */
+    ================================= */
 
     .provincias-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      margin-top: 40px;
     }
 
     .provincia-card {
       display: block;
       min-height: 210px;
       padding: 28px;
+
       position: relative;
       overflow: hidden;
+
       text-decoration: none;
       color: white;
-      border-radius: 4px;
+
       background:
         linear-gradient(
           135deg,
-          #242424,
-          #101010
+          #292929,
+          #111
         );
+
       transition:
         transform .25s ease,
         background .25s ease;
@@ -186,10 +182,11 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
     .provincia-card:hover {
       transform: translateY(-5px);
+
       background:
         linear-gradient(
           135deg,
-          #333,
+          #363636,
           #151515
         );
     }
@@ -197,15 +194,17 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     .provincia-card-content {
       position: relative;
       z-index: 2;
+
       height: 100%;
+
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
     }
 
     .provincia-numero {
-      font-size: 13px;
-      opacity: .55;
+      font-size: 12px;
+      opacity: .5;
       margin-bottom: 8px;
     }
 
@@ -216,35 +215,32 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
     .provincia-card span:last-child {
       font-size: 14px;
-      opacity: .65;
+      opacity: .6;
     }
 
-    /* =========================
+
+    /* ================================
        RESPONSIVE
-    ========================= */
+    ================================= */
 
     @media (max-width: 900px) {
+
+      .argentina-galeria {
+        grid-template-columns: 1fr;
+      }
+
+      .argentina-foto {
+        height: 300px;
+      }
 
       .provincias-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .argentina-imagenes {
-        grid-template-columns: 1fr;
-      }
-
-      .argentina-imagen-secundarias {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 240px;
-      }
-
     }
 
-    @media (max-width: 600px) {
 
-      .provincias-grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 600px) {
 
       .argentina-hero {
         min-height: 460px;
@@ -258,13 +254,12 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
         font-size: 17px;
       }
 
-      .argentina-imagen-secundarias {
+      .provincias-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 220px 220px;
       }
 
-      .argentina-imagen-principal {
-        min-height: 320px;
+      .argentina-foto {
+        height: 250px;
       }
 
     }
@@ -274,6 +269,10 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 </head>
 
 <body>
+
+<!-- =========================================
+     HEADER
+========================================= -->
 
 <header class="lugares-header">
 
@@ -298,7 +297,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     Provincias
   </a>
 
-  <a href="#lugares">
+  <a href="#galeria">
     Lugares
   </a>
 
@@ -311,9 +310,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
 <main>
 
-<!-- =====================================================
+<!-- =========================================
      HERO
-===================================================== -->
+========================================= -->
 
 <section class="argentina-hero">
 
@@ -329,9 +328,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 </h1>
 
 <p>
-  Un país lleno de edificios olvidados, estaciones
-  abandonadas, antiguas fábricas, pueblos que quedaron
-  atrás y construcciones que todavía guardan las huellas
+  Un recorrido por edificios olvidados, estaciones
+  abandonadas, antiguas fábricas, pueblos deshabitados
+  y construcciones que todavía conservan las huellas
   de otra época.
 </p>
 ```
@@ -340,9 +339,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
 </section>
 
-<!-- =====================================================
+<!-- =========================================
      INTRODUCCIÓN
-===================================================== -->
+========================================= -->
 
 <section class="lugar-section">
 
@@ -352,7 +351,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 <div class="argentina-intro">
 
   <span class="section-kicker">
-    EXPLORA EL PAÍS
+    ARGENTINA
   </span>
 
   <h2>
@@ -360,109 +359,102 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
   </h2>
 
   <p>
-    Argentina posee un enorme patrimonio de construcciones
-    que quedaron fuera de uso con el paso de los años:
-    estaciones ferroviarias, fábricas, hoteles, pueblos,
-    viviendas y edificios históricos.
+    Desde las grandes ciudades hasta los territorios
+    más alejados del país existen construcciones que
+    quedaron fuera de uso y que forman parte de la
+    historia de cada región.
   </p>
 
   <p>
-    En este archivo reunimos estos lugares y los
-    organizamos por provincia para descubrir sus historias,
-    arquitectura y estado actual.
+    Estaciones ferroviarias, hoteles, fábricas, pueblos,
+    viviendas y edificios históricos forman parte de
+    este archivo de lugares olvidados.
   </p>
 
 </div>
 
 
 
-<!-- =================================================
+<!-- =====================================
      TRES IMÁGENES
-================================================== -->
+====================================== -->
 
 <div
-  id="lugares"
-  class="argentina-imagenes"
+  id="galeria"
+  class="argentina-galeria"
 >
 
-  <a
-    href="buenos-aires/"
-    class="argentina-imagen-principal"
-  >
+
+  <div class="argentina-foto">
 
     <img
-      src="https://commons.wikimedia.org/wiki/Special:FilePath/F%C3%A1brica%20abandonada%20en%20Florencio%20Varela%2C%20provincia%20de%20Buenos%20Aires%2C%20Argentina.jpg"
-      alt="Fábrica abandonada en Florencio Varela, Buenos Aires"
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20Ed%C3%A9n%20-%20Fachada.jpg"
+      alt="Hotel Edén en La Falda, Córdoba"
       loading="lazy"
     >
 
-    <div class="argentina-imagen-texto">
+    <div class="argentina-foto-texto">
 
       <span>
-        BUENOS AIRES
+        CÓRDOBA
       </span>
 
-      <h3>
-        Fábricas y edificios olvidados
-      </h3>
+      <strong>
+        Antiguos hoteles y edificios históricos
+      </strong>
 
     </div>
-
-  </a>
-
-
-
-  <div class="argentina-imagen-secundarias">
-
-
-    <div class="argentina-imagen-secundaria">
-
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n%20Gob%20Monteverde%20y%20sus%20restos.jpg"
-        alt="Restos de la estación Gobernador Monteverde, Argentina"
-        loading="lazy"
-      >
-
-      <div class="argentina-imagen-texto">
-
-        <span>
-          PATRIMONIO FERROVIARIO
-        </span>
-
-        <h3>
-          Estaciones que quedaron atrás
-        </h3>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="argentina-imagen-secundaria">
-
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Abandonada%20villa%20rincon%20chico%20-%20avenida%20de%20ingreso%20-%20panoramio.jpg"
-        alt="Villa abandonada Rincón Chico, Argentina"
-        loading="lazy"
-      >
-
-      <div class="argentina-imagen-texto">
-
-        <span>
-          LUGARES OLVIDADOS
-        </span>
-
-        <h3>
-          Pueblos y construcciones abandonadas
-        </h3>
-
-      </div>
-
-    </div>
-
 
   </div>
+
+
+
+  <div class="argentina-foto">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n%20Gob%20Monteverde%20y%20sus%20restos.jpg"
+      alt="Restos de una estación ferroviaria argentina"
+      loading="lazy"
+    >
+
+    <div class="argentina-foto-texto">
+
+      <span>
+        PATRIMONIO FERROVIARIO
+      </span>
+
+      <strong>
+        Estaciones que quedaron atrás
+      </strong>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="argentina-foto">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Abandonada%20villa%20rincon%20chico%20-%20avenida%20de%20ingreso%20-%20panoramio.jpg"
+      alt="Villa Rincón Chico abandonada en Argentina"
+      loading="lazy"
+    >
+
+    <div class="argentina-foto-texto">
+
+      <span>
+        PUEBLOS OLVIDADOS
+      </span>
+
+      <strong>
+        Lugares que quedaron vacíos
+      </strong>
+
+    </div>
+
+  </div>
+
 
 </div>
 ```
@@ -471,9 +463,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
 </section>
 
-<!-- =====================================================
+<!-- =========================================
      PROVINCIAS
-===================================================== -->
+========================================= -->
 
 <section
   id="provincias"
@@ -491,6 +483,11 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
   Explora por provincia
 </h2>
 
+<p class="lugar-texto-ancho">
+  Selecciona una provincia para descubrir los lugares
+  abandonados registrados en ella.
+</p>
+
 
 <div class="provincias-grid">
 
@@ -499,7 +496,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">01</span>
       <h3>Buenos Aires</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -508,7 +505,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">02</span>
       <h3>Catamarca</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -517,7 +514,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">03</span>
       <h3>Chaco</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -526,7 +523,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">04</span>
       <h3>Chubut</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -535,7 +532,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">05</span>
       <h3>Córdoba</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -544,7 +541,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">06</span>
       <h3>Corrientes</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -553,7 +550,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">07</span>
       <h3>Entre Ríos</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -562,7 +559,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">08</span>
       <h3>Formosa</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -571,7 +568,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">09</span>
       <h3>Jujuy</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -580,7 +577,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">10</span>
       <h3>La Pampa</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -589,7 +586,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">11</span>
       <h3>La Rioja</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -598,7 +595,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">12</span>
       <h3>Mendoza</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -607,7 +604,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">13</span>
       <h3>Misiones</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -616,7 +613,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">14</span>
       <h3>Neuquén</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -625,7 +622,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">15</span>
       <h3>Río Negro</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -634,7 +631,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">16</span>
       <h3>Salta</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -643,7 +640,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">17</span>
       <h3>San Juan</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -652,7 +649,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">18</span>
       <h3>San Luis</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -661,7 +658,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">19</span>
       <h3>Santa Cruz</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -670,7 +667,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">20</span>
       <h3>Santa Fe</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -679,7 +676,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">21</span>
       <h3>Santiago del Estero</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -688,7 +685,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">22</span>
       <h3>Tierra del Fuego</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -697,7 +694,7 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
     <div class="provincia-card-content">
       <span class="provincia-numero">23</span>
       <h3>Tucumán</h3>
-      <span>Lugares abandonados</span>
+      <span>Explorar provincia →</span>
     </div>
   </a>
 
@@ -709,9 +706,9 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 
 </section>
 
-<!-- =====================================================
+<!-- =========================================
      FINAL
-===================================================== -->
+========================================= -->
 
 <section class="lugar-final">
 
@@ -739,6 +736,10 @@ content="Explora los lugares abandonados de Argentina. Descubre edificios histó
 </section>
 
 </main>
+
+<!-- =========================================
+     FOOTER
+========================================= -->
 
 <footer class="lugares-footer">
 
