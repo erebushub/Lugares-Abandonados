@@ -1,24 +1,18 @@
 <!DOCTYPE html>
-
 <html lang="es">
 
 <head>
 
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lugares abandonados de Argentina | Lugares Abandonados</title>
 
-<meta
-name="description"
-content="Explora lugares abandonados de Argentina. Descubre edificios históricos, estaciones, fábricas, pueblos y construcciones olvidadas de las provincias argentinas."
-
->
+  <meta
+    name="description"
+    content="Explora lugares abandonados de Argentina. Descubre edificios históricos, estaciones, fábricas, pueblos y construcciones olvidadas de las provincias argentinas."
+  >
 
   <link
     rel="stylesheet"
@@ -26,10 +20,6 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
   >
 
   <style>
-
-    /* ================================
-       HERO
-    ================================= */
 
     .argentina-hero {
       min-height: 500px;
@@ -42,9 +32,9 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
         linear-gradient(
           to top,
           rgba(0,0,0,.88),
-          rgba(0,0,0,.15)
+          rgba(0,0,0,.20)
         ),
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20Ed%C3%A9n%20-%20Fachada.jpg")
+        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1800&q=85")
         center / cover no-repeat;
     }
 
@@ -69,20 +59,12 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       color: rgba(255,255,255,.85);
     }
 
-
-    /* ================================
-       INTRO
-    ================================= */
-
     .argentina-intro {
       max-width: 850px;
       margin-bottom: 55px;
     }
 
-
-    /* ================================
-       GALERÍA ARGENTINA
-    ================================= */
+    /* GALERÍA */
 
     .argentina-galeria {
       display: grid;
@@ -96,6 +78,7 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       height: 330px;
       overflow: hidden;
       background: #171717;
+      border-radius: 4px;
     }
 
     .argentina-foto img {
@@ -118,7 +101,7 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       background:
         linear-gradient(
           to top,
-          rgba(0,0,0,.75),
+          rgba(0,0,0,.80),
           rgba(0,0,0,0)
         );
     }
@@ -145,10 +128,7 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       line-height: 1.2;
     }
 
-
-    /* ================================
-       PROVINCIAS
-    ================================= */
+    /* PROVINCIAS */
 
     .provincias-grid {
       display: grid;
@@ -218,11 +198,6 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       opacity: .6;
     }
 
-
-    /* ================================
-       RESPONSIVE
-    ================================= */
-
     @media (max-width: 900px) {
 
       .argentina-galeria {
@@ -238,7 +213,6 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
       }
 
     }
-
 
     @media (max-width: 600px) {
 
@@ -268,204 +242,188 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
 
 </head>
 
+
 <body>
 
-<!-- =========================================
-     HEADER
-========================================= -->
 
 <header class="lugares-header">
 
   <div class="lugares-container lugares-header-inner">
 
-```
-<a
-  href="../../index.html"
-  class="lugares-logo"
->
-  LUGARES<span>ABANDONADOS</span>
-</a>
+    <a
+      href="../../index.html"
+      class="lugares-logo"
+    >
+      LUGARES<span>ABANDONADOS</span>
+    </a>
 
+    <nav class="lugares-nav">
 
-<nav class="lugares-nav">
+      <a href="../../index.html">
+        Inicio
+      </a>
 
-  <a href="../../index.html">
-    Inicio
-  </a>
+      <a href="#provincias">
+        Provincias
+      </a>
 
-  <a href="#provincias">
-    Provincias
-  </a>
+      <a href="#galeria">
+        Lugares
+      </a>
 
-  <a href="#galeria">
-    Lugares
-  </a>
-
-</nav>
-```
+    </nav>
 
   </div>
 
 </header>
 
+
 <main>
 
-<!-- =========================================
-     HERO
-========================================= -->
+
+<!-- HERO -->
 
 <section class="argentina-hero">
 
   <div class="argentina-hero-content">
 
-```
-<span class="lugar-kicker">
-  LUGARES ABANDONADOS · ARGENTINA
-</span>
+    <span class="lugar-kicker">
+      LUGARES ABANDONADOS · ARGENTINA
+    </span>
 
-<h1>
-  Argentina
-</h1>
+    <h1>
+      Argentina
+    </h1>
 
-<p>
-  Un recorrido por edificios olvidados, estaciones
-  abandonadas, antiguas fábricas, pueblos deshabitados
-  y construcciones que todavía conservan las huellas
-  de otra época.
-</p>
-```
+    <p>
+      Un recorrido por edificios olvidados, estaciones
+      abandonadas, antiguas fábricas, pueblos deshabitados
+      y construcciones que todavía conservan las huellas
+      de otra época.
+    </p>
 
   </div>
 
 </section>
 
-<!-- =========================================
-     INTRODUCCIÓN
-========================================= -->
+
+<!-- INTRO -->
 
 <section class="lugar-section">
 
   <div class="lugares-container">
 
-```
-<div class="argentina-intro">
+    <div class="argentina-intro">
 
-  <span class="section-kicker">
-    ARGENTINA
-  </span>
-
-  <h2>
-    Lugares abandonados de Argentina
-  </h2>
-
-  <p>
-    Desde las grandes ciudades hasta los territorios
-    más alejados del país existen construcciones que
-    quedaron fuera de uso y que forman parte de la
-    historia de cada región.
-  </p>
-
-  <p>
-    Estaciones ferroviarias, hoteles, fábricas, pueblos,
-    viviendas y edificios históricos forman parte de
-    este archivo de lugares olvidados.
-  </p>
-
-</div>
-
-
-
-<!-- =====================================
-     TRES IMÁGENES
-====================================== -->
-
-<div
-  id="galeria"
-  class="argentina-galeria"
->
-
-
-  <div class="argentina-foto">
-
-    <img
-      src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20Ed%C3%A9n%20-%20Fachada.jpg"
-      alt="Hotel Edén en La Falda, Córdoba"
-      loading="lazy"
-    >
-
-    <div class="argentina-foto-texto">
-
-      <span>
-        CÓRDOBA
+      <span class="section-kicker">
+        ARGENTINA
       </span>
 
-      <strong>
-        Antiguos hoteles y edificios históricos
-      </strong>
+      <h2>
+        Lugares abandonados de Argentina
+      </h2>
+
+      <p>
+        Desde las grandes ciudades hasta los territorios
+        más alejados del país existen construcciones que
+        quedaron fuera de uso y que forman parte de la
+        historia de cada región.
+      </p>
+
+      <p>
+        Estaciones ferroviarias, hoteles, fábricas, pueblos,
+        viviendas y edificios históricos forman parte de
+        este archivo de lugares olvidados.
+      </p>
 
     </div>
 
-  </div>
 
+    <!-- TRES IMÁGENES DE ARGENTINA -->
 
-
-  <div class="argentina-foto">
-
-    <img
-      src="https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n%20Gob%20Monteverde%20y%20sus%20restos.jpg"
-      alt="Restos de una estación ferroviaria argentina"
-      loading="lazy"
+    <div
+      id="galeria"
+      class="argentina-galeria"
     >
 
-    <div class="argentina-foto-texto">
 
-      <span>
-        PATRIMONIO FERROVIARIO
-      </span>
+      <div class="argentina-foto">
 
-      <strong>
-        Estaciones que quedaron atrás
-      </strong>
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Hotel%20Ed%C3%A9n%20-%20Fachada.jpg"
+          alt="Hotel Edén de La Falda, Córdoba"
+          loading="lazy"
+        >
+
+        <div class="argentina-foto-texto">
+
+          <span>
+            CÓRDOBA
+          </span>
+
+          <strong>
+            Hotel Edén
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="argentina-foto">
+
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Estaci%C3%B3n%20Gob%20Monteverde%20y%20sus%20restos.jpg"
+          alt="Antigua estación ferroviaria argentina"
+          loading="lazy"
+        >
+
+        <div class="argentina-foto-texto">
+
+          <span>
+            PATRIMONIO FERROVIARIO
+          </span>
+
+          <strong>
+            Estaciones olvidadas
+          </strong>
+
+        </div>
+
+      </div>
+
+
+      <div class="argentina-foto">
+
+        <img
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Abandonada%20villa%20rincon%20chico%20-%20avenida%20de%20ingreso%20-%20panoramio.jpg"
+          alt="Villa Rincón Chico abandonada"
+          loading="lazy"
+        >
+
+        <div class="argentina-foto-texto">
+
+          <span>
+            PUEBLOS OLVIDADOS
+          </span>
+
+          <strong>
+            Lugares que quedaron vacíos
+          </strong>
+
+        </div>
+
+      </div>
+
 
     </div>
-
-  </div>
-
-
-
-  <div class="argentina-foto">
-
-    <img
-      src="https://commons.wikimedia.org/wiki/Special:FilePath/Abandonada%20villa%20rincon%20chico%20-%20avenida%20de%20ingreso%20-%20panoramio.jpg"
-      alt="Villa Rincón Chico abandonada en Argentina"
-      loading="lazy"
-    >
-
-    <div class="argentina-foto-texto">
-
-      <span>
-        PUEBLOS OLVIDADOS
-      </span>
-
-      <strong>
-        Lugares que quedaron vacíos
-      </strong>
-
-    </div>
-
-  </div>
-
-
-</div>
-```
 
   </div>
 
 </section>
 
-<!-- =========================================
-     PROVINCIAS
-========================================= -->
+
+<!-- PROVINCIAS -->
 
 <section
   id="provincias"
@@ -474,299 +432,290 @@ content="Explora lugares abandonados de Argentina. Descubre edificios histórico
 
   <div class="lugares-container">
 
-```
-<span class="section-kicker">
-  DIRECTORIO
-</span>
+    <span class="section-kicker">
+      DIRECTORIO
+    </span>
 
-<h2>
-  Explora por provincia
-</h2>
+    <h2>
+      Explora por provincia
+    </h2>
 
-<p class="lugar-texto-ancho">
-  Selecciona una provincia para descubrir los lugares
-  abandonados registrados en ella.
-</p>
-
-
-<div class="provincias-grid">
+    <p class="lugar-texto-ancho">
+      Selecciona una provincia para descubrir los lugares
+      abandonados registrados en ella.
+    </p>
 
 
-  <a href="buenos-aires/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">01</span>
-      <h3>Buenos Aires</h3>
-      <span>Explorar provincia →</span>
+    <div class="provincias-grid">
+
+
+      <a href="buenos-aires/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">01</span>
+          <h3>Buenos Aires</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="catamarca/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">02</span>
+          <h3>Catamarca</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="chaco/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">03</span>
+          <h3>Chaco</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="chubut/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">04</span>
+          <h3>Chubut</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="cordoba/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">05</span>
+          <h3>Córdoba</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="corrientes/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">06</span>
+          <h3>Corrientes</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="entre-rios/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">07</span>
+          <h3>Entre Ríos</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="formosa/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">08</span>
+          <h3>Formosa</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="jujuy/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">09</span>
+          <h3>Jujuy</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="la-pampa/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">10</span>
+          <h3>La Pampa</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="la-rioja/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">11</span>
+          <h3>La Rioja</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="mendoza/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">12</span>
+          <h3>Mendoza</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="misiones/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">13</span>
+          <h3>Misiones</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="neuquen/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">14</span>
+          <h3>Neuquén</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="rio-negro/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">15</span>
+          <h3>Río Negro</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="salta/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">16</span>
+          <h3>Salta</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="san-juan/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">17</span>
+          <h3>San Juan</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="san-luis/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">18</span>
+          <h3>San Luis</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="santa-cruz/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">19</span>
+          <h3>Santa Cruz</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="santa-fe/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">20</span>
+          <h3>Santa Fe</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="santiago-del-estero/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">21</span>
+          <h3>Santiago del Estero</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="tierra-del-fuego/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">22</span>
+          <h3>Tierra del Fuego</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
+      <a href="tucuman/" class="provincia-card">
+        <div class="provincia-card-content">
+          <span class="provincia-numero">23</span>
+          <h3>Tucumán</h3>
+          <span>Explorar provincia →</span>
+        </div>
+      </a>
+
+
     </div>
-  </a>
-
-
-  <a href="catamarca/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">02</span>
-      <h3>Catamarca</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="chaco/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">03</span>
-      <h3>Chaco</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="chubut/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">04</span>
-      <h3>Chubut</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="cordoba/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">05</span>
-      <h3>Córdoba</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="corrientes/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">06</span>
-      <h3>Corrientes</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="entre-rios/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">07</span>
-      <h3>Entre Ríos</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="formosa/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">08</span>
-      <h3>Formosa</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="jujuy/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">09</span>
-      <h3>Jujuy</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="la-pampa/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">10</span>
-      <h3>La Pampa</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="la-rioja/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">11</span>
-      <h3>La Rioja</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="mendoza/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">12</span>
-      <h3>Mendoza</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="misiones/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">13</span>
-      <h3>Misiones</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="neuquen/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">14</span>
-      <h3>Neuquén</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="rio-negro/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">15</span>
-      <h3>Río Negro</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="salta/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">16</span>
-      <h3>Salta</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="san-juan/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">17</span>
-      <h3>San Juan</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="san-luis/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">18</span>
-      <h3>San Luis</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="santa-cruz/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">19</span>
-      <h3>Santa Cruz</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="santa-fe/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">20</span>
-      <h3>Santa Fe</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="santiago-del-estero/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">21</span>
-      <h3>Santiago del Estero</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="tierra-del-fuego/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">22</span>
-      <h3>Tierra del Fuego</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-  <a href="tucuman/" class="provincia-card">
-    <div class="provincia-card-content">
-      <span class="provincia-numero">23</span>
-      <h3>Tucumán</h3>
-      <span>Explorar provincia →</span>
-    </div>
-  </a>
-
-
-</div>
-```
 
   </div>
 
 </section>
 
-<!-- =========================================
-     FINAL
-========================================= -->
+
+<!-- FINAL -->
 
 <section class="lugar-final">
 
   <div class="lugares-container">
 
-```
-<span class="section-kicker">
-  LUGARES ABANDONADOS
-</span>
+    <span class="section-kicker">
+      LUGARES ABANDONADOS
+    </span>
 
-<h2>
-  Historias que todavía esperan ser descubiertas.
-</h2>
+    <h2>
+      Historias que todavía esperan ser descubiertas.
+    </h2>
 
-<a
-  href="../../index.html"
-  class="volver-button"
->
-  ← Volver al inicio
-</a>
-```
+    <a
+      href="../../index.html"
+      class="volver-button"
+    >
+      ← Volver al inicio
+    </a>
 
   </div>
 
 </section>
 
+
 </main>
 
-<!-- =========================================
-     FOOTER
-========================================= -->
 
 <footer class="lugares-footer">
 
   <div class="lugares-container footer-inner">
 
-```
-<div>
+    <div>
 
-  <strong>
-    LUGARES ABANDONADOS
-  </strong>
+      <strong>
+        LUGARES ABANDONADOS
+      </strong>
 
-  <p>
-    Un archivo de lugares olvidados.
-  </p>
+      <p>
+        Un archivo de lugares olvidados.
+      </p>
 
-</div>
+    </div>
 
-
-<div>
-  © 2026 Lugares Abandonados
-</div>
-```
+    <div>
+      © 2026 Lugares Abandonados
+    </div>
 
   </div>
 
 </footer>
+
 
 </body>
 
