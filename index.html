@@ -15,490 +15,520 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
+<header class="header">
 
-  <!-- ============================= -->
-  <!-- HEADER -->
-  <!-- ============================= -->
+  <div class="container header-inner">
 
-  <header class="header">
+    <a href="index.html" class="logo">
+      LUGARES<span>ABANDONADOS</span>
+    </a>
 
-    <div class="container header-inner">
+    <nav class="nav">
+      <a href="#explorar">Explorar</a>
+      <a href="#categorias">Categorías</a>
+      <a href="#paises">Países</a>
+    </nav>
 
-      <a href="index.html" class="logo">
-        LUGARES<span>ABANDONADOS</span>
-      </a>
+    <button class="menu-button" aria-label="Abrir menú">
+      ☰
+    </button>
 
+  </div>
 
-      <nav class="nav">
-
-        <a href="#explorar">
-          Explorar
-        </a>
-
-        <a href="#categorias">
-          Categorías
-        </a>
-
-        <a href="#paises">
-          Países
-        </a>
-
-      </nav>
+</header>
 
 
-      <button
-        class="menu-button"
-        aria-label="Abrir menú"
+<main>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-background"></div>
+
+  <div class="container hero-content">
+
+    <div class="hero-label">
+      EXPLORA LO OLVIDADO
+    </div>
+
+    <h1>
+      Lugares que<br>
+      <em>el tiempo olvidó.</em>
+    </h1>
+
+    <p>
+      Descubre lugares abandonados, edificios olvidados,
+      antiguas fábricas, estaciones, hoteles y pueblos
+      que quedaron atrás.
+    </p>
+
+    <div class="hero-search">
+
+      <input
+        id="search"
+        type="search"
+        placeholder="¿Qué lugar estás buscando?"
+        autocomplete="off"
       >
-        ☰
+
+      <button id="search-button">
+        Buscar
       </button>
 
     </div>
 
-  </header>
+  </div>
 
+  <div class="hero-scroll">
+    ↓ Explorar
+  </div>
 
+</section>
 
-  <!-- ============================= -->
-  <!-- CONTENIDO -->
-  <!-- ============================= -->
 
-  <main>
+<!-- DESTACADOS -->
 
+<section id="explorar" class="section featured">
 
-    <!-- HERO -->
+  <div class="container">
 
-    <section class="hero">
-
-      <div class="hero-background"></div>
-
-
-      <div class="container hero-content">
-
-        <div class="hero-label">
-          EXPLORA LO OLVIDADO
-        </div>
-
-
-        <h1>
-          Lugares que<br>
-          <em>el tiempo olvidó.</em>
-        </h1>
-
-
-        <p>
-          Descubre lugares abandonados, edificios olvidados,
-          antiguas fábricas, estaciones, hoteles y pueblos
-          que quedaron atrás.
-        </p>
-
-
-        <div class="hero-search">
-
-          <input
-            id="search"
-            type="search"
-            placeholder="¿Qué lugar estás buscando?"
-            autocomplete="off"
-          >
-
-
-          <button id="search-button">
-            Buscar
-          </button>
-
-        </div>
-
-      </div>
-
-
-      <div class="hero-scroll">
-        ↓ Explorar
-      </div>
-
-    </section>
-
-
-
-    <!-- ============================= -->
-    <!-- DESTACADOS -->
-    <!-- ============================= -->
-
-    <section
-      id="explorar"
-      class="section featured"
-    >
-
-      <div class="container">
-
-
-        <div class="section-heading">
-
-          <div>
-
-            <span class="section-kicker">
-              DESCUBRE
-            </span>
-
-            <h2>
-              Lugares destacados
-            </h2>
-
-          </div>
-
-        </div>
-
-
-        <!--
-          Aquí aparecerán posteriormente
-          los lugares destacados.
-        -->
-
-        <div
-          id="featured-grid"
-          class="featured-grid"
-        ></div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ============================= -->
-    <!-- CATEGORÍAS -->
-    <!-- ============================= -->
-
-    <section
-      id="categorias"
-      class="section categories-section"
-    >
-
-      <div class="container">
-
-
-        <div class="section-heading">
-
-          <div>
-
-            <span class="section-kicker">
-              EXPLORA POR TIPO
-            </span>
-
-            <h2>
-              ¿Qué quieres encontrar?
-            </h2>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="categories-grid">
-
-
-          <button
-            class="category-card category-hoteles"
-            data-category="Hoteles"
-          >
-
-            <span>
-              01
-            </span>
-
-            <strong>
-              Hoteles
-            </strong>
-
-            <small>
-              Hoteles y complejos abandonados
-            </small>
-
-          </button>
-
-
-
-          <button
-            class="category-card category-fabricas"
-            data-category="Fábricas"
-          >
-
-            <span>
-              02
-            </span>
-
-            <strong>
-              Fábricas
-            </strong>
-
-            <small>
-              Antiguos complejos industriales
-            </small>
-
-          </button>
-
-
-
-          <button
-            class="category-card category-estaciones"
-            data-category="Estaciones"
-          >
-
-            <span>
-              03
-            </span>
-
-            <strong>
-              Estaciones
-            </strong>
-
-            <small>
-              Estaciones ferroviarias abandonadas
-            </small>
-
-          </button>
-
-
-
-          <button
-            class="category-card category-pueblos"
-            data-category="Pueblos abandonados"
-          >
-
-            <span>
-              04
-            </span>
-
-            <strong>
-              Pueblos
-            </strong>
-
-            <small>
-              Pueblos y localidades abandonadas
-            </small>
-
-          </button>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ============================= -->
-    <!-- PAÍSES -->
-    <!-- ============================= -->
-
-    <section
-      id="paises"
-      class="section countries-section"
-    >
-
-      <div class="container">
-
-
-        <div class="section-heading">
-
-          <div>
-
-            <span class="section-kicker">
-              EXPLORA EL MUNDO
-            </span>
-
-            <h2>
-              Países
-            </h2>
-
-          </div>
-
-        </div>
-
-
-
-        <div class="countries-grid">
-
-
-          <!-- ITALIA -->
-
-          <a
-            href="lugares/italia/"
-            class="country"
-          >
-
-            <span>
-              🇮🇹
-            </span>
-
-            <strong>
-              Italia
-            </strong>
-
-          </a>
-
-
-
-          <!-- ARGENTINA -->
-
-          <a
-            href="#"
-            class="country"
-          >
-
-            <span>
-              🇦🇷
-            </span>
-
-            <strong>
-              Argentina
-            </strong>
-
-          </a>
-
-
-
-          <!-- MÉXICO -->
-
-          <a
-            href="#"
-            class="country"
-          >
-
-            <span>
-              🇲🇽
-            </span>
-
-            <strong>
-              México
-            </strong>
-
-          </a>
-
-
-
-          <!-- FRANCIA -->
-
-          <a
-            href="#"
-            class="country"
-          >
-
-            <span>
-              🇫🇷
-            </span>
-
-            <strong>
-              Francia
-            </strong>
-
-          </a>
-
-
-
-          <!-- ALEMANIA -->
-
-          <a
-            href="#"
-            class="country"
-          >
-
-            <span>
-              🇩🇪
-            </span>
-
-            <strong>
-              Alemania
-            </strong>
-
-          </a>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ============================= -->
-    <!-- CTA FINAL -->
-    <!-- ============================= -->
-
-    <section class="final-cta">
-
-      <div class="container">
-
-
-        <span class="section-kicker">
-          LUGARES QUE MERECEN SER RECORDADOS
-        </span>
-
-
-        <h2>
-          Hay historias que<br>
-          todavía esperan ser descubiertas.
-        </h2>
-
-
-        <a
-          href="#paises"
-          class="cta-button"
-        >
-          Explorar lugares
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-  </main>
-
-
-
-  <!-- ============================= -->
-  <!-- FOOTER -->
-  <!-- ============================= -->
-
-  <footer class="footer">
-
-    <div class="container footer-inner">
-
+    <div class="section-heading">
 
       <div>
 
-        <strong>
-          LUGARES ABANDONADOS
-        </strong>
+        <span class="section-kicker">
+          DESCUBRE
+        </span>
 
-        <p>
-          Un archivo de lugares olvidados.
-        </p>
+        <h2>
+          Lugares destacados
+        </h2>
 
       </div>
-
-
-      <div class="footer-copy">
-        © 2026 Lugares Abandonados
-      </div>
-
 
     </div>
 
-  </footer>
+    <div
+      id="featured-grid"
+      class="featured-grid"
+    ></div>
+
+  </div>
+
+</section>
 
 
+<!-- CATEGORÍAS -->
 
-  <script src="app.js"></script>
+<section id="categorias" class="section categories-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <span class="section-kicker">
+          EXPLORA POR TIPO
+        </span>
+
+        <h2>
+          ¿Qué quieres encontrar?
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="categories-grid">
+
+      <button
+        class="category-card category-hoteles"
+        data-category="Hoteles"
+      >
+        <span>01</span>
+        <strong>Hoteles</strong>
+        <small>Hoteles y complejos abandonados</small>
+      </button>
+
+
+      <button
+        class="category-card category-fabricas"
+        data-category="Fábricas"
+      >
+        <span>02</span>
+        <strong>Fábricas</strong>
+        <small>Antiguos complejos industriales</small>
+      </button>
+
+
+      <button
+        class="category-card category-estaciones"
+        data-category="Estaciones"
+      >
+        <span>03</span>
+        <strong>Estaciones</strong>
+        <small>Estaciones ferroviarias abandonadas</small>
+      </button>
+
+
+      <button
+        class="category-card category-pueblos"
+        data-category="Pueblos abandonados"
+      >
+        <span>04</span>
+        <strong>Pueblos</strong>
+        <small>Pueblos y localidades abandonadas</small>
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PAÍSES -->
+
+<section id="paises" class="section countries-section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div>
+
+        <span class="section-kicker">
+          EXPLORA EL MUNDO
+        </span>
+
+        <h2>
+          Países
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <div class="countries-grid">
+
+
+      <a href="lugares/argentina/" class="country">
+        <span>🇦🇷</span>
+        <strong>Argentina</strong>
+      </a>
+
+      <a href="lugares/italia/" class="country">
+        <span>🇮🇹</span>
+        <strong>Italia</strong>
+      </a>
+
+      <a href="lugares/francia/" class="country">
+        <span>🇫🇷</span>
+        <strong>Francia</strong>
+      </a>
+
+      <a href="lugares/alemania/" class="country">
+        <span>🇩🇪</span>
+        <strong>Alemania</strong>
+      </a>
+
+      <a href="lugares/portugal/" class="country">
+        <span>🇵🇹</span>
+        <strong>Portugal</strong>
+      </a>
+
+      <a href="lugares/reino-unido/" class="country">
+        <span>🇬🇧</span>
+        <strong>Reino Unido</strong>
+      </a>
+
+      <a href="lugares/irlanda/" class="country">
+        <span>🇮🇪</span>
+        <strong>Irlanda</strong>
+      </a>
+
+      <a href="lugares/belgica/" class="country">
+        <span>🇧🇪</span>
+        <strong>Bélgica</strong>
+      </a>
+
+      <a href="lugares/paises-bajos/" class="country">
+        <span>🇳🇱</span>
+        <strong>Países Bajos</strong>
+      </a>
+
+      <a href="lugares/suiza/" class="country">
+        <span>🇨🇭</span>
+        <strong>Suiza</strong>
+      </a>
+
+      <a href="lugares/austria/" class="country">
+        <span>🇦🇹</span>
+        <strong>Austria</strong>
+      </a>
+
+      <a href="lugares/polonia/" class="country">
+        <span>🇵🇱</span>
+        <strong>Polonia</strong>
+      </a>
+
+      <a href="lugares/chequia/" class="country">
+        <span>🇨🇿</span>
+        <strong>Chequia</strong>
+      </a>
+
+      <a href="lugares/hungria/" class="country">
+        <span>🇭🇺</span>
+        <strong>Hungría</strong>
+      </a>
+
+      <a href="lugares/grecia/" class="country">
+        <span>🇬🇷</span>
+        <strong>Grecia</strong>
+      </a>
+
+      <a href="lugares/rumania/" class="country">
+        <span>🇷🇴</span>
+        <strong>Rumanía</strong>
+      </a>
+
+      <a href="lugares/bulgaria/" class="country">
+        <span>🇧🇬</span>
+        <strong>Bulgaria</strong>
+      </a>
+
+      <a href="lugares/croacia/" class="country">
+        <span>🇭🇷</span>
+        <strong>Croacia</strong>
+      </a>
+
+      <a href="lugares/serbia/" class="country">
+        <span>🇷🇸</span>
+        <strong>Serbia</strong>
+      </a>
+
+      <a href="lugares/ucrania/" class="country">
+        <span>🇺🇦</span>
+        <strong>Ucrania</strong>
+      </a>
+
+      <a href="lugares/noruega/" class="country">
+        <span>🇳🇴</span>
+        <strong>Noruega</strong>
+      </a>
+
+      <a href="lugares/suecia/" class="country">
+        <span>🇸🇪</span>
+        <strong>Suecia</strong>
+      </a>
+
+      <a href="lugares/finlandia/" class="country">
+        <span>🇫🇮</span>
+        <strong>Finlandia</strong>
+      </a>
+
+      <a href="lugares/dinamarca/" class="country">
+        <span>🇩🇰</span>
+        <strong>Dinamarca</strong>
+      </a>
+
+      <a href="lugares/islandia/" class="country">
+        <span>🇮🇸</span>
+        <strong>Islandia</strong>
+      </a>
+
+      <a href="lugares/estados-unidos/" class="country">
+        <span>🇺🇸</span>
+        <strong>Estados Unidos</strong>
+      </a>
+
+      <a href="lugares/canada/" class="country">
+        <span>🇨🇦</span>
+        <strong>Canadá</strong>
+      </a>
+
+      <a href="lugares/mexico/" class="country">
+        <span>🇲🇽</span>
+        <strong>México</strong>
+      </a>
+
+      <a href="lugares/brasil/" class="country">
+        <span>🇧🇷</span>
+        <strong>Brasil</strong>
+      </a>
+
+      <a href="lugares/chile/" class="country">
+        <span>🇨🇱</span>
+        <strong>Chile</strong>
+      </a>
+
+      <a href="lugares/peru/" class="country">
+        <span>🇵🇪</span>
+        <strong>Perú</strong>
+      </a>
+
+      <a href="lugares/colombia/" class="country">
+        <span>🇨🇴</span>
+        <strong>Colombia</strong>
+      </a>
+
+      <a href="lugares/bolivia/" class="country">
+        <span>🇧🇴</span>
+        <strong>Bolivia</strong>
+      </a>
+
+      <a href="lugares/ecuador/" class="country">
+        <span>🇪🇨</span>
+        <strong>Ecuador</strong>
+      </a>
+
+      <a href="lugares/uruguay/" class="country">
+        <span>🇺🇾</span>
+        <strong>Uruguay</strong>
+      </a>
+
+      <a href="lugares/paraguay/" class="country">
+        <span>🇵🇾</span>
+        <strong>Paraguay</strong>
+      </a>
+
+      <a href="lugares/japon/" class="country">
+        <span>🇯🇵</span>
+        <strong>Japón</strong>
+      </a>
+
+      <a href="lugares/china/" class="country">
+        <span>🇨🇳</span>
+        <strong>China</strong>
+      </a>
+
+      <a href="lugares/corea-del-sur/" class="country">
+        <span>🇰🇷</span>
+        <strong>Corea del Sur</strong>
+      </a>
+
+      <a href="lugares/india/" class="country">
+        <span>🇮🇳</span>
+        <strong>India</strong>
+      </a>
+
+      <a href="lugares/turquia/" class="country">
+        <span>🇹🇷</span>
+        <strong>Turquía</strong>
+      </a>
+
+      <a href="lugares/tailandia/" class="country">
+        <span>🇹🇭</span>
+        <strong>Tailandia</strong>
+      </a>
+
+      <a href="lugares/indonesia/" class="country">
+        <span>🇮🇩</span>
+        <strong>Indonesia</strong>
+      </a>
+
+      <a href="lugares/filipinas/" class="country">
+        <span>🇵🇭</span>
+        <strong>Filipinas</strong>
+      </a>
+
+      <a href="lugares/australia/" class="country">
+        <span>🇦🇺</span>
+        <strong>Australia</strong>
+      </a>
+
+      <a href="lugares/nueva-zelanda/" class="country">
+        <span>🇳🇿</span>
+        <strong>Nueva Zelanda</strong>
+      </a>
+
+      <a href="lugares/sudafrica/" class="country">
+        <span>🇿🇦</span>
+        <strong>Sudáfrica</strong>
+      </a>
+
+      <a href="lugares/egipto/" class="country">
+        <span>🇪🇬</span>
+        <strong>Egipto</strong>
+      </a>
+
+      <a href="lugares/marruecos/" class="country">
+        <span>🇲🇦</span>
+        <strong>Marruecos</strong>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="final-cta">
+
+  <div class="container">
+
+    <span class="section-kicker">
+      LUGARES QUE MERECEN SER RECORDADOS
+    </span>
+
+    <h2>
+      Hay historias que<br>
+      todavía esperan ser descubiertas.
+    </h2>
+
+    <a
+      href="#paises"
+      class="cta-button"
+    >
+      Explorar lugares
+    </a>
+
+  </div>
+
+</section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <strong>
+        LUGARES ABANDONADOS
+      </strong>
+
+      <p>
+        Un archivo de lugares olvidados.
+      </p>
+
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Lugares Abandonados
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script src="app.js"></script>
 
 </body>
 
