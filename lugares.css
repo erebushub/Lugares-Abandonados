@@ -1,1 +1,434 @@
+/* =========================================
+   LUGARES ABANDONADOS
+   CSS PARA DIRECTORIO Y FICHAS
+========================================= */
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f5f4f1;
+  color: #171717;
+  font-family: Inter, Arial, sans-serif;
+}
+
+
+/* =========================================
+   CONTENEDOR
+========================================= */
+
+.lugares-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.lugares-header {
+  background: #111;
+  color: white;
+  border-bottom: 1px solid #292929;
+}
+
+.lugares-header-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.lugares-logo {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.lugares-logo span {
+  font-weight: 400;
+}
+
+.lugares-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.lugares-nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.lugares-nav a:hover {
+  color: white;
+}
+
+
+/* =========================================
+   CABECERA DE SECCIÓN
+========================================= */
+
+.lugares-top {
+  padding: 70px 0 45px;
+}
+
+.lugares-breadcrumb {
+  margin-bottom: 20px;
+  color: #777;
+  font-size: 13px;
+}
+
+.lugares-breadcrumb a {
+  color: #777;
+  text-decoration: none;
+}
+
+.lugares-breadcrumb a:hover {
+  color: #111;
+}
+
+.lugares-top h1 {
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: clamp(40px, 6vw, 72px);
+  line-height: .95;
+  letter-spacing: -2px;
+}
+
+.lugares-top p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: #666;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   LISTADO DE ZONAS / CIUDADES
+========================================= */
+
+.lugares-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding-bottom: 80px;
+}
+
+.lugar-enlace {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 110px;
+  padding: 25px;
+  background: white;
+  border: 1px solid #e4e2dd;
+  color: #171717;
+  text-decoration: none;
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.lugar-enlace:hover {
+  transform: translateY(-3px);
+  border-color: #bbb;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .07);
+}
+
+.lugar-enlace-texto strong {
+  display: block;
+  margin-bottom: 7px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 18px;
+}
+
+.lugar-enlace-texto small {
+  color: #888;
+  font-size: 13px;
+}
+
+.lugar-flecha {
+  color: #999;
+  font-size: 22px;
+}
+
+
+/* =========================================
+   TARJETAS DE LUGARES
+========================================= */
+
+.lugares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding-bottom: 90px;
+}
+
+.lugar-card {
+  display: block;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e3df;
+  color: #171717;
+  text-decoration: none;
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.lugar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .1);
+}
+
+.lugar-card-imagen {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #deddd9;
+}
+
+.lugar-card-imagen img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+
+.lugar-card:hover .lugar-card-imagen img {
+  transform: scale(1.04);
+}
+
+.lugar-card-contenido {
+  padding: 22px;
+}
+
+.lugar-card-tipo {
+  margin-bottom: 9px;
+  color: #888;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.lugar-card h2 {
+  margin: 0 0 10px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.lugar-card-ubicacion {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FICHA INDIVIDUAL
+========================================= */
+
+.lugar-ficha {
+  padding: 50px 0 100px;
+}
+
+.lugar-volver {
+  display: inline-block;
+  margin-bottom: 35px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.lugar-volver:hover {
+  color: #111;
+}
+
+
+/* HERO DE LA FICHA */
+
+.lugar-ficha-hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  min-height: 500px;
+  background: white;
+  border: 1px solid #e3e1dc;
+}
+
+.lugar-ficha-imagen {
+  min-height: 500px;
+  background: #deddd9;
+}
+
+.lugar-ficha-imagen img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.lugar-ficha-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 55px;
+}
+
+.lugar-ficha-tipo {
+  margin-bottom: 18px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.lugar-ficha-info h1 {
+  margin: 0;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: .98;
+  letter-spacing: -2px;
+}
+
+.lugar-ficha-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 30px;
+  color: #666;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TEXTO DE LA FICHA
+========================================= */
+
+.lugar-ficha-texto {
+  max-width: 800px;
+  padding: 70px 0;
+}
+
+.lugar-ficha-texto h2 {
+  margin: 0 0 25px;
+  font-family: Poppins, Arial, sans-serif;
+  font-size: 32px;
+}
+
+.lugar-ficha-texto p {
+  margin: 0;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.lugares-footer {
+  padding: 45px 0;
+  background: #111;
+  color: #aaa;
+}
+
+.lugares-footer p {
+  margin: 0;
+  font-size: 13px;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .lugares-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lugares-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lugar-ficha-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .lugar-ficha-imagen {
+    min-height: 400px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .lugares-container {
+    width: min(100% - 28px, 1200px);
+  }
+
+  .lugares-header-inner {
+    min-height: 65px;
+  }
+
+  .lugares-nav {
+    display: none;
+  }
+
+  .lugares-top {
+    padding: 45px 0 30px;
+  }
+
+  .lugares-top h1 {
+    font-size: 42px;
+  }
+
+  .lugares-lista,
+  .lugares-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lugar-ficha {
+    padding-top: 30px;
+  }
+
+  .lugar-ficha-hero {
+    display: block;
+  }
+
+  .lugar-ficha-imagen {
+    min-height: 300px;
+  }
+
+  .lugar-ficha-info {
+    padding: 35px 25px;
+  }
+
+  .lugar-ficha-info h1 {
+    font-size: 42px;
+  }
+
+  .lugar-ficha-texto {
+    padding: 50px 0;
+  }
+
+}
