@@ -224,7 +224,10 @@ function featuredCard(lugar) {
 function placeCard(lugar) {
 
   return `
-    <article class="place-card">
+    <a
+      href="lugar.html?id=${lugar.id}"
+      class="place-card"
+    >
 
       <div class="place-image">
 
@@ -260,7 +263,7 @@ function placeCard(lugar) {
 
       </div>
 
-    </article>
+    </a>
   `;
 
 }
