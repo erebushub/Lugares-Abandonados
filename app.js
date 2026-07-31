@@ -190,7 +190,10 @@ function placeholder(nombre) {
 function featuredCard(lugar) {
 
   return `
-    <a href="#" class="featured-card">
+    <a
+      href="lugar.html?id=${lugar.id}"
+      class="featured-card"
+    >
 
       ${
         lugar.imagen
