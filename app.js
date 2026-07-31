@@ -352,3 +352,76 @@ document
 
 renderFeatured();
 renderPlaces(lugares);
+
+const params = new URLSearchParams(window.location.search);
+const lugarId = params.get("id");
+
+if (lugarId) {
+
+  const lugar = lugares.find(
+    item => item.id === lugarId
+  );
+
+  const contenido =
+    document.getElementById("lugar-contenido");
+
+  if (contenido && lugar) {
+
+    document.title =
+      `${lugar.nombre} | Lugares Abandonados`;
+
+    contenido.innerHTML = `
+
+      <section class="lugar-hero">
+
+        <div class="lugar-imagen">
+
+          ${
+            lugar.imagen
+            ? `<img
+                src="${lugar.imagen}"
+                alt="${lugar.nombre}"
+              >`
+            : placeholder(lugar.nombre)
+          }
+
+        </div>
+
+        <div class="lugar-info">
+
+          <div class="place-type">
+            ${lugar.tipo}
+          </div>
+
+          <h1>
+            ${lugar.nombre}
+          </h1>
+
+          <p>
+            📍 ${lugar.ubicacion}
+          </p>
+
+          <p>
+            📅 ${lugar.anio}
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <section class="lugar-texto">
+
+        <h2>Sobre este lugar</h2>
+
+        <p>
+          ${lugar.descripcion}
+        </p>
+
+      </section>
+
+    `;
+
+  }
+
+}
