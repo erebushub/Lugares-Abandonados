@@ -3,20 +3,15 @@
 <html lang="es">
 
 <head>
-
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Lugares abandonados de Buenos Aires | Lugares Abandonados</title>
 
 <meta
 name="description"
-content="Descubre lugares abandonados, edificios históricos y construcciones olvidadas de la provincia de Buenos Aires."
+content="Explora lugares abandonados, edificios históricos y sitios olvidados de la provincia de Buenos Aires."
 
 >
 
@@ -33,6 +28,7 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
       align-items: flex-end;
       position: relative;
       overflow: hidden;
+
       background:
         linear-gradient(
           to top,
@@ -52,7 +48,7 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
     }
 
     .provincia-hero h1 {
-      font-size: clamp(48px, 8vw, 90px);
+      font-size: clamp(48px, 8vw, 88px);
       line-height: .95;
       margin: 10px 0 20px;
     }
@@ -73,26 +69,32 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
 
     .lugar-card {
       display: flex;
-      min-height: 360px;
+      flex-direction: column;
+      min-height: 390px;
       position: relative;
       overflow: hidden;
       text-decoration: none;
       color: white;
-      background-size: cover;
-      background-position: center;
-      border-radius: 4px;
-      align-items: flex-end;
+      background: #222;
       transition: transform .25s ease;
     }
 
     .lugar-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
 
-    .lugar-card::before {
+    .lugar-card-imagen {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .lugar-card-imagen::after {
       content: "";
       position: absolute;
       inset: 0;
+
       background:
         linear-gradient(
           to top,
@@ -101,52 +103,34 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
         );
     }
 
-    .lugar-card-content {
+    .lugar-card-contenido {
       position: relative;
       z-index: 2;
-      width: 100%;
-      padding: 28px;
+      margin-top: auto;
+      padding: 30px;
     }
 
     .lugar-card-kicker {
-      display: block;
       font-size: 12px;
-      letter-spacing: .08em;
-      opacity: .7;
-      margin-bottom: 8px;
+      letter-spacing: .12em;
+      opacity: .75;
     }
 
-    .lugar-card h3 {
-      margin: 0 0 8px;
+    .lugar-card h2 {
       font-size: 30px;
+      margin: 8px 0;
     }
 
     .lugar-card p {
       margin: 0;
       font-size: 14px;
-      opacity: .78;
-      line-height: 1.5;
-    }
-
-    .palacio-piria {
-      background-image:
-        url("https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20Piria%20en%20la%20actualidad..jpg");
+      opacity: .75;
     }
 
     .sin-lugares {
-      padding: 45px;
-      border: 1px solid rgba(0,0,0,.08);
-      background: white;
-    }
-
-    .sin-lugares strong {
-      display: block;
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .volver-argentina {
-      margin-top: 50px;
+      margin-top: 35px;
+      padding: 30px;
+      background: #f3f3f3;
     }
 
     @media (max-width: 900px) {
@@ -219,9 +203,7 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
 
 <main>
 
-<!-- =====================================================
-     HERO
-===================================================== -->
+<!-- HERO -->
 
 <section class="provincia-hero">
 
@@ -237,9 +219,9 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
 </h1>
 
 <p>
-  Edificios históricos, antiguas residencias,
-  estaciones, fábricas y construcciones olvidadas
-  que forman parte de la historia de la provincia.
+  Edificios históricos, palacios, estaciones,
+  fábricas y otros lugares que forman parte de
+  la historia olvidada de la provincia.
 </p>
 ```
 
@@ -247,9 +229,7 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
 
 </section>
 
-<!-- =====================================================
-     INTRO
-===================================================== -->
+<!-- INTRO -->
 
 <section class="lugar-section">
 
@@ -264,73 +244,47 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
   Lugares abandonados de Buenos Aires
 </h2>
 
-<div class="lugar-texto-ancho">
+<p class="lugar-texto-ancho">
+  Recorre nuestro archivo de lugares abandonados
+  de la provincia de Buenos Aires. Cada lugar cuenta
+  con información sobre su historia, arquitectura,
+  ubicación, estado actual y patrimonio.
+</p>
 
-  <p>
-    La provincia de Buenos Aires conserva una enorme
-    cantidad de construcciones vinculadas a su pasado
-    ferroviario, industrial, turístico y rural.
-  </p>
 
-  <p>
-    Algunas permanecen en pie aunque hayan perdido su
-    función original. Otras se encuentran completamente
-    abandonadas y muestran el paso del tiempo sobre su
-    arquitectura.
-  </p>
+<!-- LUGARES -->
 
-  <p>
-    En este archivo reunimos sus historias, fotografías,
-    ubicación y estado actual.
-  </p>
-
-</div>
-```
-
-  </div>
-
-</section>
-
-<!-- =====================================================
-     LUGARES
-===================================================== -->
-
-<section
+<div
   id="lugares"
-  class="lugar-section lugar-section-gris"
+  class="lugares-grid"
 >
-
-  <div class="lugares-container">
-
-```
-<span class="section-kicker">
-  DIRECTORIO
-</span>
-
-<h2>
-  Lugares abandonados
-</h2>
-
-
-<div class="lugares-grid">
 
 
   <!-- PALACIO PIRIA -->
 
   <a
     href="palacio-piria.html"
-    class="lugar-card palacio-piria"
+    class="lugar-card"
   >
 
-    <div class="lugar-card-content">
+    <div
+      class="lugar-card-imagen"
+      style="
+        background-image:
+          url('https://commons.wikimedia.org/wiki/Special:FilePath/Palacio%20Piria%20en%20la%20actualidad..jpg');
+      "
+    ></div>
+
+
+    <div class="lugar-card-contenido">
 
       <span class="lugar-card-kicker">
-        PALACIO HISTÓRICO · ENSENADA
+        PALACIO HISTÓRICO · ABANDONADO
       </span>
 
-      <h3>
+      <h2>
         Palacio Piria
-      </h3>
+      </h2>
 
       <p>
         Punta Lara · Ensenada · Buenos Aires
@@ -348,50 +302,46 @@ content="Descubre lugares abandonados, edificios históricos y construcciones ol
 
 </section>
 
-<!-- =====================================================
-     INFORMACIÓN
-===================================================== -->
+<!-- INFORMACIÓN -->
 
-<section class="lugar-section">
+<section class="lugar-section lugar-section-gris">
 
   <div class="lugares-container">
 
 ```
 <span class="section-kicker">
-  EL ARCHIVO
+  ARCHIVO
 </span>
 
 <h2>
-  Una provincia llena de historias
+  Historias que todavía esperan ser descubiertas
 </h2>
 
-<div class="lugar-texto-ancho">
+<p class="lugar-texto-ancho">
+  Este archivo irá creciendo con nuevos lugares
+  abandonados de toda la provincia de Buenos Aires.
+  Cada ficha será independiente y estará organizada
+  dentro de esta sección.
+</p>
+```
 
-  <p>
-    Buenos Aires será uno de los archivos más amplios
-    del proyecto. A medida que se incorporen nuevos
-    lugares, aparecerán aquí organizados individualmente.
-  </p>
+  </div>
 
-  <p>
-    Cada lugar contará con su propia página dedicada,
-    incluyendo historia, fotografías, arquitectura,
-    ubicación, estado actual y fuentes consultadas.
-  </p>
+</section>
 
-</div>
+<!-- VOLVER -->
 
+<section class="lugar-final">
 
-<div class="volver-argentina">
+  <div class="lugares-container">
 
-  <a
-    href="../"
-    class="volver-button"
-  >
-    ← Volver a Argentina
-  </a>
-
-</div>
+```
+<a
+  href="../"
+  class="volver-button"
+>
+  ← Volver a Argentina
+</a>
 ```
 
   </div>
