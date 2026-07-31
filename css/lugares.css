@@ -1,1 +1,654 @@
+/* =========================================================
+   LUGARES ABANDONADOS
+   CSS PARA FICHAS INDIVIDUALES
+========================================================= */
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: #f4f3ef;
+  color: #202020;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.lugares-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.lugares-header {
+  position: relative;
+  z-index: 10;
+  background: #111;
+  color: #fff;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.lugares-header-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.lugares-logo {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.lugares-logo span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  color: #aaa;
+  margin-top: -2px;
+}
+
+.lugares-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.lugares-nav a {
+  color: #ccc;
+  font-size: 14px;
+  transition: color .2s ease;
+}
+
+.lugares-nav a:hover {
+  color: #fff;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.lugar-hero {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  background: #111;
+  color: #fff;
+}
+
+.lugar-hero-imagen {
+  min-height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lugar-hero-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.05),
+    rgba(0,0,0,.35)
+  );
+}
+
+.lugar-hero-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lugar-hero-contenido {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  background: #171717;
+}
+
+.lugar-kicker,
+.section-kicker {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #a77a42;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.lugar-hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: .95;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+.lugar-subtitulo {
+  max-width: 520px;
+  color: #c8c8c8;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 45px;
+}
+
+.lugar-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  border-top: 1px solid #383838;
+  padding-top: 25px;
+}
+
+.lugar-datos div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lugar-datos span {
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #777;
+  font-weight: 700;
+}
+
+.lugar-datos strong {
+  font-size: 14px;
+  font-weight: 500;
+  color: #eee;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.lugar-section {
+  padding: 100px 0;
+  background: #f4f3ef;
+}
+
+.lugar-section-gris {
+  background: #e9e7e1;
+}
+
+.lugar-section h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(34px, 4vw, 52px);
+  font-weight: 400;
+  line-height: 1.1;
+  max-width: 800px;
+  margin-bottom: 35px;
+}
+
+.lugar-intro {
+  max-width: 850px;
+}
+
+.lugar-intro p,
+.lugar-texto-ancho {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.9;
+}
+
+.lugar-intro p {
+  margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   CONTENIDO + SIDEBAR
+========================================================= */
+
+.lugar-content-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, .7fr);
+  gap: 90px;
+  align-items: start;
+}
+
+.lugar-content-grid article p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.lugar-dato-box {
+  background: #171717;
+  color: #fff;
+  padding: 35px;
+}
+
+.lugar-dato-box > span {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 2px;
+  color: #a77a42;
+  margin-bottom: 30px;
+}
+
+.lugar-dato-box strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.lugar-dato-box p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CITA
+========================================================= */
+
+.lugar-cita {
+  border-left: 3px solid #a77a42;
+  padding: 25px 30px;
+}
+
+.lugar-cita p {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.lugar-cita span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #777;
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+.lugar-galeria-section {
+  background: #111;
+  color: #fff;
+}
+
+.lugar-galeria-section h2 {
+  color: #fff;
+}
+
+.lugar-galeria {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.lugar-galeria figure {
+  margin: 0;
+  background: #1b1b1b;
+}
+
+.lugar-galeria img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.lugar-galeria figcaption {
+  padding: 15px 18px;
+  color: #888;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.galeria-nota {
+  margin-top: 25px;
+  color: #666;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   UBICACIÓN
+========================================================= */
+
+.lugar-ubicacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.lugar-ubicacion-info {
+  padding-top: 15px;
+}
+
+.lugar-ubicacion-info h3 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.lugar-ubicacion-info p {
+  color: #666;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.mapa-placeholder {
+  min-height: 320px;
+  background:
+    linear-gradient(
+      135deg,
+      #d9d7d0,
+      #c4c2bb
+    );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mapa-placeholder span {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.mapa-placeholder strong {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.mapa-placeholder small {
+  color: #666;
+  margin-top: 5px;
+}
+
+.mapa-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 13px 20px;
+  background: #171717;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.mapa-button:hover {
+  background: #333;
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   PATRIMONIO / FUENTES
+========================================================= */
+
+.fuente-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #8a6335;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.fuentes-section {
+  background: #dedcd6;
+}
+
+.fuentes-lista {
+  max-width: 850px;
+  padding-left: 20px;
+}
+
+.fuentes-lista li {
+  color: #666;
+  margin-bottom: 12px;
+  padding-left: 5px;
+}
+
+
+/* =========================================================
+   DATOS / CURIOSIDADES
+========================================================= */
+
+.datos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: #c9c7c0;
+  margin-top: 50px;
+}
+
+.dato {
+  background: #e9e7e1;
+  padding: 35px 28px;
+}
+
+.dato > strong {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #aaa;
+}
+
+.dato h3 {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 20px 0 12px;
+}
+
+.dato p {
+  color: #666;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.lugar-final {
+  padding: 60px 0;
+  background: #111;
+}
+
+.volver-button {
+  display: inline-block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  border-bottom: 1px solid #666;
+  padding-bottom: 5px;
+  transition: border-color .2s ease;
+}
+
+.volver-button:hover {
+  border-color: #fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.lugares-footer {
+  background: #0b0b0b;
+  color: #fff;
+  padding: 45px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.lugares-footer strong {
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.lugares-footer p {
+  color: #666;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.lugares-footer .footer-inner > div:last-child {
+  color: #555;
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .lugar-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .lugar-hero-imagen {
+    min-height: 500px;
+  }
+
+  .lugar-hero-contenido {
+    padding: 55px 35px;
+  }
+
+  .lugar-content-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .lugar-galeria {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lugar-ubicacion {
+    grid-template-columns: 1fr;
+  }
+
+  .datos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .lugares-container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .lugares-header-inner {
+    min-height: 65px;
+  }
+
+  .lugares-nav {
+    display: none;
+  }
+
+  .lugar-hero-imagen {
+    min-height: 330px;
+  }
+
+  .lugar-hero-contenido {
+    padding: 45px 24px;
+  }
+
+  .lugar-hero h1 {
+    font-size: 52px;
+  }
+
+  .lugar-subtitulo {
+    font-size: 16px;
+  }
+
+  .lugar-datos {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .lugar-section {
+    padding: 70px 0;
+  }
+
+  .lugar-section h2 {
+    font-size: 36px;
+  }
+
+  .lugar-intro p,
+  .lugar-texto-ancho {
+    font-size: 16px;
+  }
+
+  .lugar-galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .lugar-galeria img {
+    height: 300px;
+  }
+
+  .datos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lugar-cita p {
+    font-size: 22px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+}
